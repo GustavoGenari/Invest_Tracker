@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Investimento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>💹 Invest Tracker</header>
+<main>
+    <h2>Editar Investimento</h2>
+
+    <div class="card">
+        <form id="form-editar">
+            <input type="text" id="nome" placeholder="Nome do investimento" required>
+            <input type="text" id="tipo" placeholder="Tipo" required>
+            <input type="number" id="valorInvestido" placeholder="Valor Investido (R$)" required>
+            <input type="number" step="0.01" id="rentabilidade" placeholder="Rentabilidade (%)">
+            <input type="date" id="dataAplicacao" required>
+            <select id="status">
+                <option value="ATIVO">Ativo</option>
+                <option value="RESGATADO">Resgatado</option>
+            </select>
+
+            <div class="container-buttons">
+                <button type="submit">Salvar Alterações</button>
+                <button type="button" onclick="window.location.href='index.html'">Voltar</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+<script src="editar.js"></script>
+</body>
+</html>
