@@ -1,0 +1,100 @@
+{
+  "info": {
+    "name": "Carteira - Investimentos API",
+    "_postman_id": "c2c25f88-4f7b-4d33-8f8b-0e0b1c9b9d75",
+    "description": "Coleção Postman para testar o controller InvestimentoController (CRUD completo).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Criar Investimento (POST)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Tesouro Direto\",\n  \"tipo\": \"Renda Fixa\",\n  \"valorInvestido\": 1000.00,\n  \"rentabilidade\": 0.12,\n  \"dataAplicacao\": \"2025-01-15\",\n  \"status\": \"Ativo\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/investimentos",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["investimentos"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listar Todos (GET)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/investimentos",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["investimentos"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Buscar por ID (GET)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/investimentos/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["investimentos", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Atualizar Investimento (PUT)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"CDB Banco XP\",\n  \"tipo\": \"Renda Fixa\",\n  \"valorInvestido\": 2000.00,\n  \"rentabilidade\": 0.135,\n  \"dataAplicacao\": \"2025-03-10\",\n  \"status\": \"Ativo\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/investimentos/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["investimentos", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Excluir Investimento (DELETE)",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:8080/investimentos/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["investimentos", "1"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
